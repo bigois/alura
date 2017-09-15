@@ -1,9 +1,17 @@
 package br.com.alura.java2;
 
-public class Funcionario {
+public abstract class Funcionario {
+	private String nome;
 	protected double salario;
-	
-	public double getBonus() {
-		return this.salario * 0.1;
+
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
+
+	public abstract double getBonus();
+
+	public String getNome() {
+		return nome;
+	}
+
 }
