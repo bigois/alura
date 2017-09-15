@@ -1,6 +1,6 @@
 package br.com.alura.java2;
 
-public class Gerente extends FuncionarioAutenticavel {
+public class Gerente extends Funcionario implements Autenticavel {
 
 	@Override
 	public double getBonus() {
@@ -9,6 +9,11 @@ public class Gerente extends FuncionarioAutenticavel {
 
 	public void cobraEntrega() {
 		System.out.println("Está pronto?");
+	}
+
+	@Override
+	public boolean autentica(int senha) {
+		return false;
 	}
 
 }
