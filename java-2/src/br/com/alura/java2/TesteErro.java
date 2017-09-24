@@ -3,7 +3,11 @@ package br.com.alura.java2;
 public class TesteErro {
 	public static void main(String[] args) {
 		System.out.println("inicio do main");
-		metodo1();
+		try {
+			metodo1();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Erro: " + e);
+		}
 		System.out.println("fim do main");
 	}
 

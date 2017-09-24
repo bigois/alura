@@ -1,5 +1,6 @@
 package br.com.alura.java2;
 
+@SuppressWarnings("serial")
 public class SaldoInsuficienteException extends RuntimeException {
 
 	private double saldoAtual;
