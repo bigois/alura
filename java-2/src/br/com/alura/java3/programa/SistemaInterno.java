@@ -1,0 +1,16 @@
+package br.com.alura.java3.programa;
+
+import br.com.alura.java3.modelo.Autenticavel;
+
+public class SistemaInterno {
+
+	public void autentica(Autenticavel f) {
+		int senha = 123;
+		if (f.autentica(senha) == true) {
+			System.out.println("Bem vindo ao sistema!");
+		} else {
+			System.out.println("Usuário Inválido!");
+		}
+	}
+
+}
