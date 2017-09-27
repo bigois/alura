@@ -50,7 +50,7 @@ public class TestasString {
 	public static int qntdChar(String palavra) {
 		int qntdChar = palavra.length();
 		return qntdChar;
-	}h
+	}
 
 	/**
 	 * Retorna se encontrou a palavra procurada na palavra raíz
