@@ -1,8 +1,8 @@
 package br.com.alura.java3;
 
 /**
- * A classe {@code TestaTudo} tem como objetivo testar o métodos estáticos
- * nela criados.
+ * A classe {@code TestaTudo} tem como objetivo testar o métodos estáticos nela
+ * criados.
  * 
  * @author Guilherme Bigois
  * @since IMPL1.0
@@ -17,10 +17,15 @@ public class TestasString {
 	 */
 	public static void main(String[] args) {
 		String s = "  Escolaridade";
+		String s1 = "Familiares";
 		s = s.replaceAll("1", "2");
 		System.out.println("A String está vazia: " + estaVazio(s));
 		System.out.println("A palavra vida está dentro de viver? " + temAPalavra(s, "vida"));
 		System.out.println(s.trim() + " tem " + qntdChar(s.trim()) + " caracteres");
+		palavraNaVertical(s);
+		System.out.println(palavraComHifen(s1));
+		System.out.println("Eu gosto de " + inverte("roma"));
+		inverteComStringBuilder(s1);
 	}
 
 	/**
@@ -72,5 +77,56 @@ public class TestasString {
 		String palavraLimpa = palavra.trim();
 		return palavraLimpa;
 	}
+
+	/**
+	 * Exibe uma {@code String} na vertical
+	 * 
+	 * @param palavra
+	 *            Palavra a ser convertida
+	 */
+	public static void palavraNaVertical(String palavra) {
+		for (int i = 0; i < palavra.length(); i++) {
+			System.out.println(palavra.charAt(i));
+		}
+	}
+
+	/**
+	 * Efetua a separação dos caracteres da {@code String} com hífens
+	 * 
+	 * @param palavra
+	 *            Palavra a ser hifenizada
+	 * @return Retorna a palavra hifenizada
+	 */
+	public static String palavraComHifen(String palavra) {
+		String novaPalavra = "";
+		for (int i = 0; i < palavra.length(); i++) {
+			if (i == (palavra.length() - 1)) {
+				novaPalavra += String.valueOf(palavra.charAt(i));
+			} else {
+				novaPalavra += String.valueOf(palavra.charAt(i) + "-");
+			}
+		}
+		return novaPalavra;
+	}
+
+	/**
+	 * Inverte a {@code String}
+	 * 
+	 * @param palavra
+	 *            {@code String} a ser invertida
+	 * @return {@code String} invertida
+	 */
+	private static String inverte(String palavra) {
+		String invertida = "";
+		for (int i = palavra.length() - 1; i >= 0; i--) {
+			invertida += String.valueOf(palavra.charAt(i));
+		}
+		return invertida;
+	}
+	
+    public static void inverteComStringBuilder(String texto) {
+        StringBuilder invertido = new StringBuilder(texto).reverse();
+        System.out.println(invertido);
+    }
 
 }
