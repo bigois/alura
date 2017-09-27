@@ -8,7 +8,7 @@ import br.com.alura.java3.excecao.ValorInvalidoException;
  * @author Guilherme Bigois
  * 
  */
-public class Conta {
+public abstract class Conta {
 	private double saldo;
 	private String titular;
 	private int agencia;
