@@ -21,6 +21,16 @@ public abstract class Conta {
 	}
 
 	/**
+	 * Construtor apenas de saldo
+	 * 
+	 * @param saldo
+	 *            Saldo atual da conta
+	 */
+	public Conta(double saldo) {
+		this.saldo = saldo;
+	}
+
+	/**
 	 * Construtor com todos os atributos
 	 * 
 	 * @param saldo
