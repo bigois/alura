@@ -1,14 +1,13 @@
 package br.com.alura.java3.programa;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Vector;
 
 import br.com.alura.java3.modelo.ProduzMensagens;
 
 public class TestaProduzMensagens {
 
 	public static void main(String[] args) throws InterruptedException {
-		Collection<String> mensagens = new ArrayList<String>();
+		Vector<String> mensagens = new Vector<String>();
 
 		Thread t1 = new Thread(new ProduzMensagens(0, 10000, mensagens));
 		Thread t2 = new Thread(new ProduzMensagens(10000, 20000, mensagens));
